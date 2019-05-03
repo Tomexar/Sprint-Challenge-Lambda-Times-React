@@ -121,7 +121,7 @@ body {
   cursor: pointer;
 }
 .header {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -135,7 +135,7 @@ body {
 @media (min-width: 1280px) {
   .header {
     width: 1280px;
-  }
+  } */
 }
 .header h1 {
   font-size: 60px;
