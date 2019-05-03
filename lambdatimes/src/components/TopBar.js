@@ -12,6 +12,8 @@ const TopStyle = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  @media (min-width: 1280px) {
+    width: 1280px;
   }
 `;
 
@@ -24,11 +26,7 @@ const Container = styled.div`
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
-  }
-  @media (min-width: 1280px) {
-  .top-bar .container {
-    width: 1280px;
-  }
+
   `;
 
 
@@ -57,6 +55,39 @@ const Container = styled.div`
   font-size: 9px;
  `;
 
+ const Topiccenter = styled.span`
+  cursor: pointer;
+  margin-right: 5%;
+  :hover {
+    text-decoration: underline;
+  }
+  }
+ 
+ `;
+ const Lastone = styled.span`
+  cursor: pointer;
+  margin-right:0;
+  :hover {
+    text-decoration: underline;
+  }
+ `;
+
+const Right = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+
+`;
+
+const RightSpan = styled.span `
+cursor: pointer;
+
+`;
+
 
 
 const TopBar = () => {
@@ -67,11 +98,11 @@ const TopBar = () => {
           <Topics>TOPICS</Topics><Topics>SEARCH</Topics>
         </Left>
         <Center>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+          <Topiccenter>GENERAL</Topiccenter><Topiccenter>BROWNBAG</Topiccenter><Topiccenter>RANDOM</Topiccenter><Topiccenter>MUSIC</Topiccenter><Lastone>ANNOUNCEMENTS</Lastone>
         </Center>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
+        <Right>
+          <RightSpan>LOG IN</RightSpan>
+        </Right>
       </Container>
     </TopStyle>
   )
